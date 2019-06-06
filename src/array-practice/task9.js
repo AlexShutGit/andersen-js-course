@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /**
  * Реализовать функцию indexOfAll в этом файле, и экспортировать ее.
  *
@@ -10,3 +11,12 @@
  * console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); -> [0, 3]
  * console.log(indexOfAll([1, 2, 3], 4)); -> []
  */
+
+export const indexOfAll = (arr, value) => {
+  const res = [];
+  const checkValue = (element, index) => {
+    if (element === value) res.push(index);
+  };
+  arr.some(checkValue);
+  return res;
+};

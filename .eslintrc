@@ -11,6 +11,7 @@
     "vars-on-top": "off",
     "prefer-destructuring": "off",
     "func-names": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "autoFixOnSave": "on"
   }
 }

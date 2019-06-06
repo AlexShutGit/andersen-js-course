@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /**
  * Реализовать функцию take в этом файле, и экспортировать ее.
  *
@@ -11,3 +12,8 @@
  * console.log(take([1, 2, 3], 5)); -> [1, 2, 3]
  * console.log(take([1, 2, 3], 2)); -> [1, 2]
  */
+export const take = (arr, count) => {
+  if (arr.length < count) return arr;
+  arr.splice(count, arr.length);
+  return arr;
+};
