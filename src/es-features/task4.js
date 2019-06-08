@@ -33,19 +33,14 @@ export function task4Old() {
 export const task4New = () => {
   const x = 10;
   const y = 20;
-
-  const obj = {
+  const foo = () => 'test';
+  return {
     x,
     y,
     bar() {
       // eslint-disable-next-line no-unused-expressions
       x + y;
     },
+    [`baz${foo()}`]: 'new field',
   };
-
-  const foo = () => 'test';
-
-  obj['baz' + foo()] = 'new field';
-
-  return obj;
 };

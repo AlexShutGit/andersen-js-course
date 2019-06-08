@@ -37,8 +37,13 @@ export const task6New = () => {
       cases: [{ id: '1' }],
     };
   }
-  var { name, value, role, isActive, cases } = userModule();
-  role = role.name;
-  isActive = isActive === undefined ? false : isActive;
-  return [name, value, role, isActive, cases[0].id];
+  const {
+    name,
+    value,
+    role: { name: role },
+    isActive = false,
+    cases: [{ id: firstCaseId }],
+  } = userModule();
+  // isActive = isActive === undefined ? false : isActive;
+  return [name, value, role, isActive, firstCaseId];
 };

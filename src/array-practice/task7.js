@@ -13,7 +13,7 @@
  * console.log(take([1, 2, 3], 2)); -> [1, 2]
  */
 export const take = (arr, count) => {
-  if (arr.length < count) return arr;
-  arr.splice(count, arr.length);
-  return arr;
+  const arr1 = arr.slice();
+  arr1.splice(count, arr.length);
+  return arr1;
 };

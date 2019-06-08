@@ -33,12 +33,10 @@ export const task8New = () => {
     nums: [0, 2, 5, 10, 15],
     fives: [],
     calculateNumsFive: function() {
-      var self = this;
-      // eslint-disable-next-line array-callback-return
-      this.nums.some(value => {
-        if (value % 5 === 0) this.fives.push(value);
+      this.fives = this.nums.filter(value => {
+        return value % 5 === 0;
       });
-      return self.fives;
+      return this.fives;
     },
   };
   return obj.calculateNumsFive();

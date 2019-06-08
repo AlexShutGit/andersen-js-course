@@ -16,12 +16,11 @@
  */
 
 export const createGenerator = arr => {
-  let index = -1;
+  let index = 0;
   return {
     next: function() {
-      index += 1;
-      if (index < arr.length) return arr[index];
-      return 'Complete!';
+      // eslint-disable-next-line no-plusplus
+      return index < arr.length ? arr[index++] : 'Complete!';
     },
   };
 };

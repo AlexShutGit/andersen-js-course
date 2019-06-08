@@ -15,8 +15,11 @@
 export const indexOfAll = (arr, value) => {
   const res = [];
   const checkValue = (element, index) => {
-    if (element === value) res.push(index);
+    if (element === value) {
+      res.push(index);
+    }
   };
-  arr.some(checkValue);
+  arr.filter(checkValue);
   return res;
 };
+// asd

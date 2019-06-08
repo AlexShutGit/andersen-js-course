@@ -17,11 +17,8 @@ export const meetups = [
   { name: 'React', isActive: true, members: 500 },
 ];
 
-export const membersOnActiveMeetups = () => {
-  let res = 0;
-  // eslint-disable-next-line array-callback-return
-  meetups.some(element => {
-    if (element.isActive) res += element.members;
-  });
-  return res;
+export const membersOnActiveMeetups = meet => {
+  return meet
+    .filter(item => item.isActive)
+    .reduce((accumulator, elem) => accumulator + elem.members, 0);
 };

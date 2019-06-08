@@ -13,5 +13,5 @@
  * console.log(without([2, 1, 10, 20], 1, 2)) -> [10, 20]
  */
 export const without = (arr, ...rest) => {
-  return arr.filter(element => rest.indexOf(element) === -1);
+  return arr.filter(element => !rest.includes(element));
 };

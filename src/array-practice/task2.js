@@ -17,26 +17,8 @@
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
 export const arrayDiff = (arr1, arr2) => {
-  const resArr = [];
-  const checkArr2 = element => {
-    if (!arr2.includes(element)) resArr.push(element);
-  };
-  const checkArr1 = element => {
-    if (!arr1.includes(element)) resArr.push(element);
-  };
-  arr1.some(checkArr2);
-  arr2.some(checkArr1);
-  return resArr;
-  // var arr3 = [];
-  // for (const i in arr1) {
-  //   if (!arr2.includes(arr1[i])) {
-  //     arr3.push(arr1[i]);
-  //   }
-  // }
-  // for (const i in arr2) {
-  //   if (!arr1.includes(arr2[i])) {
-  //     arr3.push(arr2[i]);
-  //   }
-  // }
-  // return arr3;
+  return arr1.concat(arr2).filter(function(value, index, arr) {
+    arr.sort();
+    return value !== arr[index + 1] && value !== arr[index - 1];
+  });
 };
