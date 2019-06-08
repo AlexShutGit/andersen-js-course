@@ -38,8 +38,7 @@ export const task4New = () => {
     x,
     y,
     bar() {
-      // eslint-disable-next-line no-unused-expressions
-      x + y;
+      return x + y;
     },
     [`baz${foo()}`]: 'new field',
   };
