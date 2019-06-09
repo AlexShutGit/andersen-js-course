@@ -1,9 +1,10 @@
+/* eslint-disable import/prefer-default-export */
 /**
  * Реализовать функцию transformArrayToNumber в этом файле, и экспортировать ее.
  *
  * Первый аргумент - массив,
  * второй - колбек функция, которая применяется на массив
- * трений - не обязательный парамент - стартовое значение для вычисления.
+ * третий - не обязательный парамент - стартовое значение для вычисления.
  * Если не передан третий аргумент - его дефолтное значение должно быть 0
  *
  * Функция возвращает итоговый результат применения функции на массив
@@ -20,3 +21,4 @@
  * console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item), 1); -> 6000
  * console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); -> -60
  */
+export const transformArrayToNumber = (arr, cb, start = 0) => arr.reduce(cb, start);

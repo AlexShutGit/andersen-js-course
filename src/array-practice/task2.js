@@ -1,3 +1,6 @@
+import { removeAllListeners } from "cluster";
+
+/* eslint-disable import/prefer-default-export */
 /**
  * Реализовать функцию arrayDiff в этом файле, и экспортировать ее.
  *
@@ -15,3 +18,4 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+export const arrayDiff = (arr1, arr2) => arr1.filter(value => !arr2.includes(value)).concat(arr2.filter(value => !arr1.includes(value)));

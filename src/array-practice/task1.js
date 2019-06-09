@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /**
  * Реализовать функцию any в этом файле, и экспортировать ее.
  *
@@ -14,3 +15,5 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+const callback = x => !!x;
+export const any = (arr, cb = callback) => arr.some(cb);
