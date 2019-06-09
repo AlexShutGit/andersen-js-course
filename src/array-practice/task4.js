@@ -9,8 +9,4 @@
  * console.log(union([5, 1, 3, 3, 4], [1, 3, 4])); -> [5, 1, 3, 4]
  */
 
-export const union = (arr1, arr2) => {
-  return arr1.concat(arr2).filter(function(value, index, arr) {
-    return arr.indexOf(value) === index;
-  });
-};
+export const union = (arr1, arr2) => {[new Set(arr1.concat(arr2))]};

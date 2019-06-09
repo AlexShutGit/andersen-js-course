@@ -12,8 +12,4 @@
  * console.log(take([1, 2, 3], 5)); -> [1, 2, 3]
  * console.log(take([1, 2, 3], 2)); -> [1, 2]
  */
-export const take = (arr, count) => {
-  const arr1 = arr.slice();
-  arr1.splice(count, arr.length);
-  return arr1;
-};
+export const take = (arr, count) => arr.slice(0, count);

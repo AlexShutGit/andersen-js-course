@@ -14,12 +14,10 @@
 
 export const indexOfAll = (arr, value) => {
   const res = [];
-  const checkValue = (element, index) => {
-    if (element === value) {
+  arr.reduce((accumulator, currentValue, index) => {
+    if (currentValue == value) {
       res.push(index);
     }
-  };
-  arr.filter(checkValue);
+  },[]);
   return res;
 };
-// asd
