@@ -12,12 +12,10 @@
  * console.log(indexOfAll([1, 2, 3], 4)); -> []
  */
 
-export const indexOfAll = (arr, value) => {
-  const res = [];
-  arr.reduce((accumulator, currentValue, index) => {
-    if (currentValue == value) {
-      res.push(index);
-    }
-  },[]);
-  return res;
-};
+export const indexOfAll = (arr, value) => 
+arr.reduce((accumulator, currentValue, index) => {
+  if (currentValue === value){
+    accumulator.push(index);
+  } 
+  return accumulator;
+}, []);
