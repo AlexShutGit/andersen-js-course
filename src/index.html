@@ -1,14 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Andersen JS Course</title>
-  </head>
-  <body>
-    <h1>
-      Andersen JS Course
-    </h1>
-  </body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Todo.js</title>
+        <script>
+            function allowDrop(ev) {
+              ev.preventDefault();
+            }
+            
+            function drag(ev) {
+              ev.dataTransfer.setData("text", ev.target.id);
+            }
+            
+            function drop(ev) {
+              ev.preventDefault();
+              var data = ev.dataTransfer.getData("text");
+              ev.target.appendChild(document.getElementById(data));
+            }
+            </script>
+    </head>
+
+    <body>
+        <main id="app">
+          <header>
+                <h4>Верстак</h4>
+            </header>
+            <h2 style="margin-right: 30%;">Рецепты</h2>
+            <h2 style="margin-left: 52%;">Предметы</h2>
+            <form id="todo-form">
+                <p id="table-info"></p>
+                <div class="craftTable" id ="craft-table">
+                    <el class="bord" id="bord"></el>
+                    <el class="bord" id="bord"></el>
+                    <el class="bord" id="bord"></el>
+                    <el1 class="bord" id="bord"></el1>
+                    <el1 class="bord" id="bord"></el1>
+                    <el1 class="bord" id="bord"></el1>
+                    <el2 class="bord" id="bord"></el2>
+                    <el2 class="bord" id="bord"></el2>
+                    <el2 class="bord" id="bord"></el2>
+                    <el3 class="recipeBord" id="recipeBord">Рецепт</el3>
+                </div>
+                <div class="add"> 
+                    <input id="add-input" type="text">
+                    <button id="create-recipe" type="submit">Добавить рецепт</button>
+                    <button id="create-item" type="submit">Создать предмет</button>
+                </div>
+                <div class="items" id="items-list">
+                    <el class="item" draggable="true" id="item1">first item</el>
+                    </div>
+                <div class="recipes" id="recipes-list">
+                    <el class="recipe" draggable="true" id="recipe1">first recipe</el>
+            </div>
+            </form>
+            
+        </div>
+        </main>
+    </body>
 </html>
