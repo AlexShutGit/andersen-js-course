@@ -4,23 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <title>Todo.js</title>
-        <script>
-            function allowDrop(ev) {
-              ev.preventDefault();
-            }
-            
-            function drag(ev) {
-              ev.dataTransfer.setData("text", ev.target.id);
-            }
-            
-            function drop(ev) {
-              ev.preventDefault();
-              var data = ev.dataTransfer.getData("text");
-              ev.target.appendChild(document.getElementById(data));
-            }
-            </script>
     </head>
-
     <body>
         <main id="app">
           <header>
@@ -29,29 +13,29 @@
             <h2 style="margin-right: 30%;">Рецепты</h2>
             <h2 style="margin-left: 52%;">Предметы</h2>
             <form id="todo-form">
-                <p id="table-info"></p>
+                <p id="recipe-info"></p>
                 <div class="craftTable" id ="craft-table">
                     <el class="bord" id="bord"></el>
                     <el class="bord" id="bord"></el>
                     <el class="bord" id="bord"></el>
-                    <el1 class="bord" id="bord"></el1>
-                    <el1 class="bord" id="bord"></el1>
-                    <el1 class="bord" id="bord"></el1>
-                    <el2 class="bord" id="bord"></el2>
-                    <el2 class="bord" id="bord"></el2>
-                    <el2 class="bord" id="bord"></el2>
-                    <el3 class="recipeBord" id="recipeBord">Рецепт</el3>
+                    <el class="bord" id="bord"></el>
+                    <el class="bord" id="bord"></el>
+                    <el class="bord" id="bord"></el>
+                    <el class="bord" id="bord"></el>
+                    <el class="bord" id="bord"></el>
+                    <el class="bord" id="bord"></el>
                 </div>
                 <div class="add"> 
                     <input id="add-input" type="text">
-                    <button id="create-recipe" type="submit">Добавить рецепт</button>
-                    <button id="create-item" type="submit">Создать предмет</button>
+                    <button id="create-recipe" type="button">Добавить рецепт</button>
+                    <button id="create-item" type="button">Создать предмет</button>
+                    <button id="create-item-recipe" type="button">Создать предмет по рецепту</button>
                 </div>
                 <div class="items" id="items-list">
-                    <el class="item" draggable="true" id="item1">first item</el>
+                    <el class="item" draggable="true" id="item0">it</el>
                     </div>
                 <div class="recipes" id="recipes-list">
-                    <el class="recipe" draggable="true" id="recipe1">first recipe</el>
+                    <el class="recipe" draggable="true" id="recipe0">rec</el>
             </div>
             </form>
             
