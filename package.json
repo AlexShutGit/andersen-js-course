@@ -12,11 +12,6 @@
     "lint:write": "eslint --debug src/ --fix",
     "prettier": "prettier --write src/**/*.js"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.js": [
       "yarn lint:write",
@@ -42,7 +37,6 @@
     "file-loader": "^4.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "husky": "^2.4.0",
     "lint-staged": "^8.2.0",
     "mongodb": "^2.2.36",
     "node": "^12.5.0",
